@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+.titleContainer {
+  background: linear-gradient(to bottom, #ffff00 0%, #00ff00 100%);
+  padding-top: 3em;
+}
+.mainPhotoDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: linear-gradient(to bottom, #00ff00 0%, #ffff00 100%);
+  padding-top: 4em;
+}
+.mainPhotoDivLeft {
+  width: 50%;
+}
+.mainPhotoDivLeft img {
+  transform-style: preserve-3d;
+  transform: rotateY(-360deg) translateZ(-412px); /* add reverse transformation from the slides */
+  animation: swirl 40s steps(5000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
+
+  width: 40%;
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+.mainPhotoDivRight {
+  width: 50%;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainPhotoDivRight h1 {
+  width: 50%;
+  padding-bottom: 5em;
+}
+.wheelContainer {
+  padding-bottom: 15em;
+  background: linear-gradient(to bottom, #ffff00 0%, #00ff00 100%);
+}
